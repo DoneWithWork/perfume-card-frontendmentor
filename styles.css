@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+}
+
+p {
+  font-size: 14px;
+}
+
+body {
+  height: 100vh;
+  background: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.card {
+  display: grid;
+  border-radius: 10px;
+  margin: 0 1.5rem;
+  background: hsl(0, 0%, 100%);
+}
+
+.main-img img {
+  border-radius: 10px 10px 0px 0;
+}
+
+.card-content {
+  padding: 2rem;
+}
+.card-content .item-type {
+  color: hsl(228, 12%, 48%);
+  margin-bottom: 1rem;
+  letter-spacing: 5px;
+}
+.card-content .title {
+  font-family: "Fraunces", sans-serif;
+  font-size: 3.2rem;
+  color: hsl(212, 21%, 14%);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.card-content .description {
+  color: hsl(228, 12%, 48%);
+  margin-bottom: 1rem;
+}
+.card-content button {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background: hsl(158, 36%, 37%);
+  padding: 15px;
+  transition: background 1s;
+  cursor: pointer;
+}
+.card-content button:hover {
+  background: hsl(158, 36%, 47%);
+}
+.card-content .add-to-cart {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+}
+.card-content .add-to-cart span {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+.price {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  align-items: center;
+  margin: 20px 0;
+}
+.price .original {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+.price .discount {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: "Fraunces", sans-serif;
+  color: hsl(158, 36%, 37%);
+}
+
+@media (min-width: 600px) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+    max-width: min(100%, 600px);
+    margin: 0 auto;
+  }
+  .card-content {
+    padding: 3rem;
+  }
+  .card-content .title {
+    margin-bottom: 20px;
+  }
+  .price {
+    margin: 25px 0;
+  }
+  .main-img img {
+    border-radius: 10px 0 0px 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
